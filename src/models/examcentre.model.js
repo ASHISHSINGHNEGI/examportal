@@ -1,5 +1,5 @@
-import mongoose, { model, Schema } from "mongoose";
-const examCentreSchema = new mongoose.Schema({
+import { model, Schema } from "mongoose";
+const examCentreSchema = new Schema({
   escdCode: { type: String, required: true, unique: true },
   esCode: { type: String, required: true },
   centreCode: { type: String, required: true },
@@ -8,3 +8,4 @@ const examCentreSchema = new mongoose.Schema({
 });
 
 export const ExamCentre = model("ExamCentre", examCentreSchema);
+    
