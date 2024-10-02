@@ -14,4 +14,7 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
+import registerRouter from "./routes/register.route.js";
+app.use("/api/register", registerRouter);
+
 export default app;
