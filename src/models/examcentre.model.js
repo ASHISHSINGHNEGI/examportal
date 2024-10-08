@@ -8,4 +8,4 @@ const examCentreSchema = new Schema({
 });
 
 export const ExamCentre = model("ExamCentre", examCentreSchema);
-    
+      
