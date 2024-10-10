@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+
 const app = express();
 
 app.use(
@@ -15,6 +16,10 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 import registerRouter from "./routes/register.route.js";
-app.use("/api/register", registerRouter);
+app.use("/api/register ", registerRouter);
+
+app.get('/', (req, res) => {
+  res.send("Home")
+})
 
 export default app;
