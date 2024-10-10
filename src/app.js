@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 import registerRouter from "./routes/register.route.js";
-app.use("/api/register ", registerRouter);
+app.use("/api/register", registerRouter);
 
 app.get('/', (req, res) => {
   res.send("Home")
