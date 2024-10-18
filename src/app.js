@@ -19,7 +19,7 @@ import registerRouter from "./routes/register.route.js";
 app.use("/api/register", registerRouter);
 
 app.get('/', (req, res) => {
-  res.send("Home")
+  res.send("Home")  
 })
 
 export default app;

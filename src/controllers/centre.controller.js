@@ -29,8 +29,6 @@ const registerCentre = asyncHandler(async (req, res) => {
       console.log("new centre record is stored with ID: ", centre._id);
       return res.status(201).json(new ApiResponse(200, centre, "Success"));
     }
-
-
   }
 });
 
