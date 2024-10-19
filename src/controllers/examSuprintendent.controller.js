@@ -45,5 +45,12 @@ const registerExamSuperintendent = asyncHandler(async (req, res) => {
     }
   }
 });
+const getExamSupritendentDetails = asyncHandler(async (req, res) => {
+  const centreCollection = await ExamSuperintendent.find();
+  // res.send(centreCollection)
+  return res.status(201).json(new ApiResponse(200, centreCollection, "Success"));
 
-export { registerExamSuperintendent };
+})
+
+
+export { registerExamSuperintendent, getExamSupritendentDetails };

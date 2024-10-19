@@ -32,7 +32,12 @@ const registerCentre = asyncHandler(async (req, res) => {
   }
 });
 
+const getCentreDetails = asyncHandler(async (req, res) => {
+  const centreCollection = await Centre.find();
+  // res.send(centreCollection)
+  return res.status(201).json(new ApiResponse(200, centreCollection, "Success"));
+
+})
 
 
-
-export { registerCentre };
+export { registerCentre, getCentreDetails };
